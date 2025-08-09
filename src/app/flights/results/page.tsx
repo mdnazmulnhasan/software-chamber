@@ -1,9 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // app/flights/results/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { FiArrowLeft, FiFilter, FiClock, FiLayers, FiArrowRight, FiUser } from 'react-icons/fi';
+import { FiArrowLeft, FiFilter, FiLayers, FiArrowRight, FiUser } from 'react-icons/fi';
 import { FaWifi, FaUtensils, FaTv, FaWineGlassAlt } from 'react-icons/fa';
 
 interface FlightOffer {

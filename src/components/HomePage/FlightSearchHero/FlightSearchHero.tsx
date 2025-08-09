@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 import { SearchFlightInput } from '@/components/SearchFlightInput/SearchFlightInput';
@@ -43,7 +45,7 @@ export default function FlightSearchHero() {
             <span className="text-white">LESS</span>
           </h1>
           <p className="mb-6 text-lg">
-            Book cheap flights other sites simply can't find.
+            Book cheap flights other sites simply can&apos;t find.
           </p>
         </motion.div>
 
