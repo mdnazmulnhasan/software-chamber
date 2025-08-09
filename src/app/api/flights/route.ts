@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // app/api/flights/route.ts
 import { NextResponse } from 'next/server';
 import Amadeus from 'amadeus';
@@ -9,6 +10,8 @@ const amadeus = new Amadeus({
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
+  console.log(searchParams);
+  
   
   try {
     const originLocationCode = searchParams.get('originLocationCode');
@@ -32,15 +35,37 @@ export async function GET(request: Request) {
       destinationLocationCode,
       departureDate,
       returnDate: returnDate || undefined,
-      adults,
+      adults: parseInt(adults),
       travelClass: travelClass || 'ECONOMY',
       nonStop: nonStop === 'true',
-      max: max ? parseInt(max) : 50
+      max: max ? parseInt(max) : 50,
+      currencyCode: 'USD',
+      includedAirlineCodes: undefined,
+      excludedAirlineCodes: undefined,
     });
 
+    if (!response.data || !Array.isArray(response.data)) {
+      throw new Error('Invalid response format from Amadeus API');
+    }
+
     return NextResponse.json(response.data);
-  } catch (error) {
+  } catch (error: any) {
     console.error('Amadeus API error:', error);
+    
+    if (error.code === 'NetworkError') {
+      return NextResponse.json(
+        { error: 'Network error connecting to Amadeus API' },
+        { status: 503 }
+      );
+    }
+    
+    if (error.response) {
+      return NextResponse.json(
+        { error: error.response.data?.errors?.[0]?.detail || 'Amadeus API error' },
+        { status: error.response.status || 500 }
+      );
+    }
+    
     return NextResponse.json(
       { error: 'Failed to fetch flight data' },
       { status: 500 }
