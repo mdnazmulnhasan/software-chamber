@@ -1,8 +1,8 @@
-// src/components/Header.tsx
+// src/components/NavBar.tsx
 import React from "react";
 import { FiGlobe, FiUser, FiMenu } from "react-icons/fi";
 
-const Header = () => {
+const NavBar = () => {
   return (
     <header className="border-b border-gray-200">
       <div className="flex justify-between items-center px-6 py-3">
@@ -62,4 +62,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default NavBar;
