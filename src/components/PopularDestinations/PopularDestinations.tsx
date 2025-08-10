@@ -27,6 +27,7 @@ export default function PopularDestinations() {
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || "Failed to fetch destinations");
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const processedDestinations = data.data.map((item: any) => {
           const cityName = item.destination.split(",")[0];
           return {
@@ -64,7 +65,7 @@ export default function PopularDestinations() {
       Istanbul: "https://images.skypicker.com/?image=https%3A%2F%2Fimages.kiwi.com%2Fphotos%2F1280x720%2Fistanbul_tr.jpg&height=234&fit=cover&quality=75&dpr=2",
       Dubai: "https://images.skypicker.com/?image=https%3A%2F%2Fimages.kiwi.com%2Fphotos%2F1280x720%2Fdubai_ae.jpg&height=234&fit=cover&quality=75&dpr=2",
       NewYork: "https://images.skypicker.com/?image=https%3A%2F%2Fimages.kiwi.com%2Fphotos%2F1280x720%2Fnew_york_us.jpg&height=234&fit=cover&quality=75&dpr=2",
-      // Add more city images here
+     
     };
     return imageMap[cityName] || "/images/default-city.jpg";
   };

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// app/flights/results/page.tsx
+// // // app/flights/results/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
