@@ -17,11 +17,11 @@ const NavBar = () => {
 
   return (
     <header className="border-b border-gray-200">
-      {/* Top Section */}
+
       <div className="flex justify-between items-center px-4 py-3 md:px-6">
-        {/* Left Section */}
+   
         <div className="flex items-center space-x-4 md:space-x-8">
-          {/* Logo */}
+      
           <div className="flex items-center space-x-1">
             <div className="text-teal-600 text-2xl md:text-3xl font-bold">S</div>
             <span className="font-semibold tracking-tight hidden sm:inline">chamber</span>
@@ -29,7 +29,7 @@ const NavBar = () => {
             <span className="font-semibold tracking-tight hidden sm:inline">COM</span>
           </div>
 
-          {/* Desktop Nav Links */}
+
           <nav className="hidden md:flex items-center space-x-5 text-sm">
             <a href="#" className="text-teal-600 font-semibold hover:underline">
               Flights
@@ -52,9 +52,9 @@ const NavBar = () => {
           </nav>
         </div>
 
-        {/* Right Section */}
+    
         <div className="flex items-center space-x-4 md:space-x-6">
-          {/* Currency Selector - Desktop */}
+          {/*  Desktop */}
           <div className="hidden md:flex items-center space-x-1 text-sm relative">
             <div 
               className="flex items-center cursor-pointer"
@@ -74,12 +74,11 @@ const NavBar = () => {
             )}
           </div>
 
-          {/* Help - Desktop */}
+          {/* Desktop */}
           <a href="#" className="hidden md:block text-sm font-medium hover:text-teal-600">
             Help & support
           </a>
 
-          {/* Sign in - Desktop */}
           <div className="hidden md:flex items-center space-x-1 text-sm">
             <FiUser className="text-gray-700" />
             <a href="#" className="font-medium hover:text-teal-600">
@@ -126,7 +125,7 @@ const NavBar = () => {
           </nav>
 
           <div className="mt-4 pt-4 border-t border-gray-200">
-            {/* Currency Selector - Mobile */}
+            
             <div className="flex items-center justify-between py-2">
               <div className="flex items-center">
                 <FiGlobe className="text-gray-700 mr-2" />
@@ -138,12 +137,12 @@ const NavBar = () => {
               </div>
             </div>
 
-            {/* Help - Mobile */}
+      
             <a href="#" className="block py-2 text-sm font-medium">
               Help & support
             </a>
 
-            {/* Sign in - Mobile */}
+            
             <div className="flex items-center py-2">
               <FiUser className="text-gray-700 mr-2" />
               <a href="#" className="font-medium">
@@ -154,7 +153,7 @@ const NavBar = () => {
         </div>
       )}
 
-      {/* Bottom border bar */}
+
       <div className="h-[3px] bg-teal-600 relative">
         <span className="absolute right-[20px] w-[10px] h-full bg-blue-800"></span>
         <span className="absolute right-[10px] w-[10px] h-full bg-yellow-400"></span>
