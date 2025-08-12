@@ -117,7 +117,7 @@ export default function PopularDestinations() {
     const departureDate = new Date();
     const returnDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
 
-    // Create URLSearchParams object
+
     const params = new URLSearchParams();
     params.set('originLocationCode', origin);
     params.set('destinationLocationCode', destination.iataCode);
@@ -129,10 +129,8 @@ export default function PopularDestinations() {
     params.set('max', '50');
     params.set('currencyCode', 'USD');
 
-    // Store in localStorage as a fallback
     localStorage.setItem('flightSearchParams', params.toString());
     
-    // Navigate with query parameters in URL
     router.push(`/flights/results?${params.toString()}`);
   };
 
