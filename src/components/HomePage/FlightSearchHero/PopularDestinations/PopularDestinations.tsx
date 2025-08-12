@@ -43,6 +43,13 @@ const FALLBACK_DESTINATIONS: Destination[] = [
     price: 520,
     img: "https://images.skypicker.com/?image=https%3A%2F%2Fimages.kiwi.com%2Fphotos%2F1280x720%2Fnew_york_us.jpg&height=234&fit=cover&quality=75&dpr=2",
   },
+   {
+    id: "KMN",
+    name: "New York",
+    iataCode: "JFK",
+    price: 520,
+    img: "https://images.unsplash.com/photo-1505763752-deae8a3a06a0?q=80&w=800&auto=format&fit=crop",
+  }
 ];
 
 const CITY_IMAGE_MAP: Record<string, string> = {
@@ -149,7 +156,7 @@ export default function PopularDestinations() {
 
       {loading ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[...Array(6)].map((_, index) => (
+          {[...Array(7)].map((_, index) => (
             <div key={index} className="bg-gray-200 rounded-lg h-56 animate-pulse"></div>
           ))}
         </div>

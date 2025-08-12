@@ -87,7 +87,7 @@ export default function PopularFlights() {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Heading */}
+  
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Popular Flight Routes
@@ -97,7 +97,6 @@ export default function PopularFlights() {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleFlights.map((flight, index) => (
             <motion.div
@@ -107,7 +106,7 @@ export default function PopularFlights() {
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              {/* Image with overlay */}
+            
               <div className="relative h-48">
                 <img
                   src={flight.img}
@@ -139,7 +138,7 @@ export default function PopularFlights() {
                 </div>
               </div>
 
-              {/* Badge */}
+
               <div className="absolute top-4 right-4 bg-white/90 text-gray-800 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">
                 Best Deal
               </div>

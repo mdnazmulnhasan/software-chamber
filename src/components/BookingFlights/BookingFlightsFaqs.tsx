@@ -55,7 +55,7 @@ export default function BookingFlights() {
 
   return (
     <div className="max-w-7xl mx-auto py-12 md:py-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+      <h2 className="text-3xl md:text-4xl text-center md:text-left font-bold mb-8 text-gray-900">
         Booking flights with Skyscanner
       </h2>
 
