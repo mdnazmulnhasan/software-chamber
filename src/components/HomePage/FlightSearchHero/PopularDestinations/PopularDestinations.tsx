@@ -146,11 +146,6 @@ export default function PopularDestinations() {
         </select>
       </div>
 
-      {error && (
-        <div className="mb-4 p-3 bg-yellow-100 text-yellow-800 rounded-md">
-          {error}
-        </div>
-      )}
 
       {loading ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
