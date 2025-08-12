@@ -16,7 +16,7 @@ const SidebarFiltersRight = () => {
       {/* Card image */}
       <div className="bg-teal-900">
         <img
-          src="https://via.placeholder.com/300x150" // Replace with actual image URL
+          src="https://images.unsplash.com/photo-1571066811602-716837d681de?q=80&w=800&auto=format&fit=crop" // Replace with actual image URL
           alt="Travel Package"
           className="w-full h-36 object-cover"
         />

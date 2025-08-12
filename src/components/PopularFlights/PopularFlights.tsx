@@ -35,7 +35,7 @@ const flights = [
     duration: "3h 45m"
   },
   {
-    img: "https://images.unsplash.com/photo-1582542025427-45e93d43127f?q=80&w=800&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1509475826633-fed577a2c71b?q=80&w=800&auto=format&fit=crop",
     route: "London ⇌ Athens",
     price: "From $98",
     duration: "3h 30m"
@@ -71,7 +71,7 @@ const flights = [
     duration: "2h 5m"
   },
   {
-    img: "https://images.unsplash.com/photo-1571066811602-716837d681de?q=80&w=800&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1509475826633-fed577a2c71b?q=80&w=800&auto=format&fit=crop",
     route: "London ⇌ Málaga",
     price: "From $82",
     duration: "2h 45m"

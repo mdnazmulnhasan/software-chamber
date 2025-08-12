@@ -467,7 +467,7 @@ export default function FlightResultsPage() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[.5fr_1fr_.5fr]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:grid-cols-[.5fr_1fr_.5fr]">
           <SidebarFiltersLeft />
 
           <div className="space-y-4">
