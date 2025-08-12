@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✈️ Flight Booking Application
 
-## Getting Started
+![Flight Booking App Screenshot](https://i.ibb.co.com/1GWNWKqM/search-input-dsktp-1.png)
 
-First, run the development server:
+A modern, responsive flight booking web application built with Next.js that helps users discover and book flights to popular destinations worldwide.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🗺️ Popular Destinations
+- Browse attractive destination cards with high-quality images
+- Filter by departure airport (DUB, LHR, JFK, IST)
+- Responsive grid layout for all screen sizes
+- Fallback content when API data is unavailable
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔍 Flight Search
+- Comprehensive flight listings with all relevant details
+- Multiple sorting options:
+  - Best match
+  - Price (low to high)
+  - Duration (shortest first)
+  - Departure time (earliest first)
+- Advanced filtering:
+  - Maximum stops
+  - Airlines
+  - Price range
+  - Departure time of day
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ✨ Flight Details
+- Airline logos and information
+- Detailed departure/arrival times and terminals
+- Flight duration and stop information
+- Amenity icons (WiFi, meals, entertainment, drinks)
+- Layover details for connecting flights
 
-## Learn More
+## 🛠️ Technologies
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **State Management**: React Hooks
+- **Image Optimization**: Next.js Image Component
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
+- Node.js (v18 or later)
+- npm or yarn
+- Amadeus API credentials (for production)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone  https://github.com/mdnazmulnhasan/software-chamber.git
+   cd software-chamber
