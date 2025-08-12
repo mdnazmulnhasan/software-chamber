@@ -103,7 +103,7 @@ const airlineNames: Record<string, string> = {
 };
 
 const getFallbackLogo = (airlineCode: string) => {
-  // Use a reliable placeholder service or base64 encoded image
+
   return `data:image/svg+xml;base64,${btoa(
     `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
       <rect width="40" height="40" fill="#f0f0f0"/>
@@ -297,7 +297,7 @@ export default function FlightResultsPage() {
           case "departure":
             return parseTime(a.departure.time) - parseTime(b.departure.time);
 
-          default: // 'best'
+          default: 
             const priceDiff = parseFloat(a.price) - parseFloat(b.price);
             return priceDiff !== 0
               ? priceDiff
@@ -341,15 +341,14 @@ export default function FlightResultsPage() {
   };
 
   const filteredFlights = flights.filter((flight) => {
-    // Filter by stops
+  
     if (flight.stops > filters.maxStops) return false;
 
-    // Filter by price
     const price = parseFloat(flight.price);
     if (price < filters.priceRange[0] || price > filters.priceRange[1])
       return false;
 
-    // Filter by airlines
+    
     if (
       filters.airlines.length > 0 &&
       !filters.airlines.includes(flight.airline)
@@ -357,7 +356,7 @@ export default function FlightResultsPage() {
       return false;
     }
 
-    // Filter by departure time
+ 
     if (filters.departureTime.length > 0) {
       const timeOfDay = getTimeOfDay(flight.departure.time);
       if (!filters.departureTime.includes(timeOfDay)) return false;
